@@ -23,3 +23,8 @@ README template borrowed from [Make a README](https://www.makeareadme.com/)
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Screenshots
+
+![Website Screenshot One](assets/images/workDayScheduler1.png)
+![Website Screenshot Two](assets/images/workDayScheduler2.png)
