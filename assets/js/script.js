@@ -23,7 +23,6 @@ $(function () {
   // current hour in 24-hour time?
   //
   let currentHour = dayjs().hour()
-  currentHour = 12
   $('.time-block').each(function () {
     let rowHour = parseInt($(this).attr('id').split('-')[1])
     if (rowHour < currentHour) {
