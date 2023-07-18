@@ -14,11 +14,17 @@ $(function () {
     let savedText = $(this).siblings('.description').val()
     console.log(`Saved Text: ${savedText}`)
     let savedTime = $(this).parent().attr('id')
+    let savedTimeReadable = $(this)
+      .parent('.time-block')
+      .children('.hour')
+      .text()
+    console.log(savedTimeReadable)
     console.log(`Saved Time: ${savedTime}`)
     localStorage.setItem(savedTime, savedText)
     // console.log(localStorage.getItem(`localStorage savedTime: ${savedTime}`))
     let debug = localStorage.getItem(savedTime)
     console.log(`Local Storage: ${debug}`)
+    alert(`Saved text: ${savedText} for time: ${savedTimeReadable}`)
   })
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
