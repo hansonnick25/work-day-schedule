@@ -10,17 +10,10 @@ $(function () {
   // useful when saving the description in local storage?
   //
   $('.saveBtn').on('click', function () {
-    console.log($(this))
     let savedText = $(this).siblings('.description').val()
-    console.log(`Saved Text: ${savedText}`)
     let savedTime = $(this).parent().attr('id')
     let savedTimeReadable = $(this).siblings('.hour').text()
-    console.log(savedTimeReadable)
-    console.log(`Saved Time: ${savedTime}`)
     localStorage.setItem(savedTime, savedText)
-    // console.log(localStorage.getItem(`localStorage savedTime: ${savedTime}`))
-    let debug = localStorage.getItem(savedTime)
-    console.log(`Local Storage: ${debug}`)
     alert(`Saved text: ${savedText} for time: ${savedTimeReadable}`)
   })
   // TODO: Add code to apply the past, present, or future class to each time
@@ -43,10 +36,6 @@ $(function () {
       $(this).removeClass('present')
       $(this).addClass('future')
     }
-    let classes = $(this).attr('class')
-    console.log(
-      `Row Hour: ${rowHour}, Current Hour: ${currentHour}, Classes ${classes}`
-    )
   })
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
